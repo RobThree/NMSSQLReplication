@@ -15,7 +15,17 @@ The following stored procedures are implemented, including all of their paramete
 * [sp_replmonitorsubscriptionpendingcmds](http://technet.microsoft.com/en-us/library/ms189452.aspx)
 * [sp_replmonitorhelppublicationthresholds](http://technet.microsoft.com/en-us/library/ms189442.aspx)
 
-The code is tested against SQL Server 2012; other versions have not (yet) been tested. Feedback and/or help of any kind is most welcome!
+The code is tested against SQL Server 2012; other versions have not (yet) been tested.
+
+The following stored procedures haven't (yet!) been implemented:
+
+1. To monitor merge changes waiting to be uploaded or downloaded
+  * [sp_showpendingchanges](http://technet.microsoft.com/en-us/library/ms186795.aspx)
+2. To monitor Merge Agent sessions
+  * [sp_replmonitorhelpmergesession](http://technet.microsoft.com/en-us/library/ms187726.aspx)
+  * [sp_replmonitorhelpmergesessiondetail](http://technet.microsoft.com/en-us/library/ms186970.aspx)
+3. To modify the monitor threshold metrics for a publication
+  * [sp_replmonitorchangepublicationthreshold](http://technet.microsoft.com/en-us/library/ms176085.aspx)
 
 ## Usage
 
@@ -82,3 +92,7 @@ class Program
     }
 }
 ````
+
+## Finally...
+
+Feedback and/or help of any kind is most welcome!
