@@ -7,7 +7,7 @@
     <authors>RobIII</authors>
     <owners>RobIII</owners>
     <projectUrl>https://github.com/RobThree/NMSSQLReplication</projectUrl>
-    <iconUrl>https://github.com/RobThree/NMSSQLReplication/icon_32.png</iconUrl>
+    <iconUrl>https://raw.github.com/RobThree/NMSSQLReplication/master/icon_64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This package provides a simple abstraction over MSSQL's replication features.</description>
     <summary>
