@@ -3,7 +3,7 @@
   <metadata>
     <id>NMSSQLReplication</id>
     <title>.Net MSSQL Replication helper</title>
-    <version>0.3.0.0-alpha</version>
+    <version>0.3.0-alpha</version>
     <authors>RobIII</authors>
     <owners>RobIII</owners>
     <projectUrl>https://github.com/RobThree/NMSSQLReplication</projectUrl>
