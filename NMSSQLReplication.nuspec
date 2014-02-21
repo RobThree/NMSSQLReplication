@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NMSSQLReplication</id>
+    <title>.Net MSSQL Replication helper</title>
+    <version>0.3.0.0</version>
+    <authors>RobIII</authors>
+    <owners>RobIII</owners>
+    <projectUrl>https://github.com/RobThree/NMSSQLReplication</projectUrl>
+    <iconUrl>https://github.com/RobThree/NMSSQLReplication/icon_32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package provides a simple abstraction over MSSQL's replication features.</description>
+    <summary>
+      This package provides a simple abstraction over MSSQL's replication features. Not all features are supported currently.
+    </summary>
+    <releaseNotes>
+      * Initial commit
+    </releaseNotes>
+    <tags>mssql replication</tags>
+  </metadata>
+  <files>
+    <file src="\NMSSQLReplication\bin\Release\NMSSQLReplication.dll" target="lib/net45" />
+    <file src="\NMSSQLReplication\bin\Release\NMSSQLReplication.XML" target="lib/net45" />
+  </files>
+</package>
