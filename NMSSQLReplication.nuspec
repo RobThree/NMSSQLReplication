@@ -17,6 +17,10 @@
       * Initial commit
     </releaseNotes>
     <tags>mssql replication</tags>
+    <dependencies>
+      <dependency id="Dapper" version="[1.13]" />
+      <dependency id="Dapper.ColumnMapper" version="[1.0.1]" />
+    </dependencies>
   </metadata>
   <files>
     <file src="\NMSSQLReplication\bin\Release\NMSSQLReplication.dll" target="lib/net45" />
