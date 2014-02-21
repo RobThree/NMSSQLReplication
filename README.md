@@ -42,3 +42,43 @@ Publisher
 ````
 
 Similarly you can call the `ListPublications()`, `ListSubscriptions()`, `ListPendingTransactionalCommands()` and `ListPublicationThresholds()` methods which, in turn, will return `IEnumerables` of types `Publication`, `Subscription`, `PendingTransactionalCommands` and `PublicationThreshold` object respectively.
+
+A more complete example, excersizing all (currently implemented) methods, should explain more:
+
+```c#
+using NMSSQLReplication;
+using System.Configuration;
+using System.Data.SqlClient;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["mssql4"].ConnectionString))
+        {
+            connection.Open();
+
+            //List all publishers
+            var publishers = connection.ListPublishers();
+            foreach (var p in publishers)
+            {
+                //List all publications for publisher p
+                var publications = connection.ListPublications(p.Name);
+                foreach (var l in publications)
+                {
+                    //List publication thresholds for publication l
+                    var publicationthresholds = connection.ListPublicationThresholds(p.Name, filterpublicationtype: l.PublicationType);
+
+                    //List all subscriptions for publication l
+                    var subscriptions = connection.ListSubscriptions(p.Name, filterpublicationtype: l.PublicationType);
+                    foreach (var s in subscriptions)
+                    {
+                        //List all pending transactional commands for subscription s
+                        var pendingtransactions = connection.ListPendingTransactionalCommands(p.Name, l.PublisherDb, l.Name, s.Subscriber, s.SubscriberDb, (SubscriptionType)s.Subtype);
+                    }
+                }
+            }
+        }
+    }
+}
+````
