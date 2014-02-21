@@ -29,7 +29,7 @@ using (var connection = new SqlConnection("Data Source=192.168.0.1;Initial Catal
 }
 ````
 
-This returns a `Publisher` object:
+This returns an `IEnumerable` of type `Publisher`:
 ```
 Publisher
    Name : SQLSRVR0018,
@@ -41,4 +41,4 @@ Publisher
    ReturnStampDateTime : 2014-02-21T18:00:30.38
 ````
 
-Similarly you can call the `ListPublications()`, `ListSubscriptions()`, `ListPendingTransactionalCommands()` and `ListPublicationThresholds()` methods which, in turn, will return a `Publication`, `Subscription`, `PendingTransactionalCommands` and `PublicationThreshold` object respectively.
+Similarly you can call the `ListPublications()`, `ListSubscriptions()`, `ListPendingTransactionalCommands()` and `ListPublicationThresholds()` methods which, in turn, will return `IEnumerables` of types `Publication`, `Subscription`, `PendingTransactionalCommands` and `PublicationThreshold` object respectively.
