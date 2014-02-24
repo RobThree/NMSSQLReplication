@@ -18,19 +18,19 @@ Where `8090` is the port to be used. Make sure to specify the correct `DOMAIN\us
 Next, edit the config file `MSSQLReplicationMonitorService.exe.config` to specify the `baseurl` and add one or more connectionstrings:
 
 ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <configuration>
-      <connectionStrings>
-        <add name="serverA" connectionString="Data Source=192.168.0.1;Initial Catalog=distribution;Integrated Security=SSPI;"/>
-        <add name="serverB" connectionString="Data Source=10.10.0.123;Initial Catalog=distribution;Integrated Security=SSPI;"/>
-      </connectionStrings>
-      <appSettings>
-        <add key="baseurl" value="http://localhost:8090/replmonitor"/>
-      </appSettings>
-      <startup>
-        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5"/>
-      </startup>
-    </configuration>
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="serverA" connectionString="Data Source=192.168.0.1;Initial Catalog=distribution;Integrated Security=SSPI;"/>
+    <add name="serverB" connectionString="Data Source=10.10.0.123;Initial Catalog=distribution;Integrated Security=SSPI;"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="baseurl" value="http://localhost:8090/replmonitor"/>
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5"/>
+  </startup>
+</configuration>
 ```
 
 Ofcourse you can change the desired port (in this example `8090`) and root (here `/replmonitor`). Make sure this matches the urlacl you added earlier. You can add one or more connectionstrings; you will specify the connectionstrings' `name` in the urls to indicate which server/database you want to use. Make sure the user you're using to run the application / service as has the required permissions on the target databases / servers to execute the stored procedures described in [Programmatically Monitor Replication](http://technet.microsoft.com/en-us/library/ms147874.aspx).
