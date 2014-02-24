@@ -118,8 +118,8 @@ namespace NMSSQLReplication
         /// <param name="filterpublisherdb">To limit the result set to a single Publisher Database, specify filterpublisherdb.</param>
         /// <param name="filterpublication">To limit the result set to a single Publication, specify filterpublisher.</param>
         /// <param name="filtersubscriber">To limit the result set to a single Subscriber, specify filtersubscriber.</param>
-        /// <param name="filtersubscriberdb">The type of subscription to filter.</param>
-        /// <param name="filtersubscriptiontype"></param>
+        /// <param name="filtersubscriberdb">To limit the result set to a single Subscription Database, specify filtersubscriberdb.</param>
+        /// <param name="filtersubscriptiontype">The type of subscription to filter.</param>
         /// <returns>This returns monitoring information for all commands pending for all subscriptions using this Distributor.</returns>
         /// <remarks>See <a href="http://technet.microsoft.com/en-us/library/ms189452.aspx">MSDN</a></remarks>
         public static IEnumerable<PendingTransactionalCommands> ListPendingTransactionalCommands(this SqlConnection connection, 

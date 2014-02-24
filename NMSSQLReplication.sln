@@ -14,10 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1D86DA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{364F011A-A5EF-42FE-A1F3-AE6F82158C83}"
 	ProjectSection(SolutionItems) = preProject
+		builldnugetpackage.cmd = builldnugetpackage.cmd
 		icon_128.png = icon_128.png
 		icon_32.png = icon_32.png
 		icon_64.png = icon_64.png
 		NMSSQLReplication.nuspec = NMSSQLReplication.nuspec
+		NMSSQLReplication\NMSSQLReplication.shfbproj = NMSSQLReplication\NMSSQLReplication.shfbproj
 		README.md = README.md
 	EndProjectSection
 EndProject
