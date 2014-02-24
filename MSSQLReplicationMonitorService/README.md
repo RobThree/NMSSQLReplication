@@ -35,7 +35,7 @@ Next, edit the config file `MSSQLReplicationMonitorService.exe.config` to specif
 
 Ofcourse you can change the desired port (in this example `8090`) and root (here `/replmonitor`). Make sure this matches the urlacl you added earlier. You can add one or more connectionstrings; you will specify the connectionstrings' `name` in the urls to indicate which server/database you want to use. Make sure the user you're using to run the application / service as has the required permissions on the target databases / servers to execute the stored procedures described in [Programmatically Monitor Replication](http://technet.microsoft.com/en-us/library/ms147874.aspx).
 
-Now you can run the executable on the commandline as `MSSQLReplicationMonitorService.exe`. This will run the application until you enter `Q` to quit. To install the application as a service use `MSSQLReplicationMonitorService.exe -install` and, conversely, you can run `MSSQLReplicationMonitorService.exe -uninstall` to remove the service. Don't forget to change the user / startup in `services.msc` to the desired user and `automatic` respectively.
+Now you can run the executable on the commandline as `MSSQLReplicationMonitorService.exe`. This will run the application until you enter `Q` to quit. To install the application as a service use `MSSQLReplicationMonitorService.exe -install` and, conversely, you can run `MSSQLReplicationMonitorService.exe -uninstall` to remove the service. Don't forget to change the user and startup mode in `services.msc` to the desired user and `automatic` respectively.
 
 ## Usage
 
