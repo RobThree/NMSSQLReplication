@@ -43,10 +43,10 @@ namespace MSSQLReplicationMonitorService
 
         // GET /monitor/listpublicationthresholds
         [HttpGet]
-        public IEnumerable<PublicationThreshold> ListPublicationThresholds(string connectionstringname, string publisher = null, string publisherdb = null, string publication = null, PublicationType? publicationtype = null, string thresholsmetricname = null)
+        public IEnumerable<PublicationThreshold> ListPublicationThresholds(string connectionstringname, string publisher = null, string publisherdb = null, string publication = null, PublicationType? publicationtype = null, string thresholdmetricname = null)
         {
             using (var c = GetOpenConnection(connectionstringname))
-                return c.ListPublicationThresholds(publisher, publisherdb, publication, publicationtype, thresholsmetricname);
+                return c.ListPublicationThresholds(publisher, publisherdb, publication, publicationtype, thresholdmetricname);
         }
 
         private SqlConnection GetOpenConnection(string connectionstringname)

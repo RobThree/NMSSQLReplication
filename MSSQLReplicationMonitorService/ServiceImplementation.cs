@@ -37,7 +37,7 @@ namespace MSSQLReplicationMonitorService
 
             config.Routes.MapHttpRoute(
                 name: "ReplicationMonitor",
-                routeTemplate: "monitor/{action}/{connectionstringname}",
+                routeTemplate: "{action}/{connectionstringname}",
                 defaults: new { controller = "ReplicationMonitor" }
             );
 
