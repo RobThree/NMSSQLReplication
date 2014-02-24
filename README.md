@@ -129,7 +129,7 @@ class Program
                 return settings;
             });
 
-            //Use some nested linq magic to retrieve all object and then use Json.NET to serialize the entire graph into result
+            //Use some nested linq magic to retrieve all objects and then use Json.NET to serialize the entire graph into result
             var result = JsonConvert.SerializeObject(
                 connection.ListPublishers().Select(p => new ExtendedPublisher(p)
                 {
