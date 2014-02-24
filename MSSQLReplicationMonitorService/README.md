@@ -33,7 +33,7 @@ Now you can run the executable on the commandline as `MSSQLReplicationMonitorSer
 
 ## Usage
 
-When the application or service is running you can open a browser and navigate to the `base-url` + `/replmonitor/listpublications/<connectionstringname>` to test the service. Below are some examples:
+When the application or service is running you can open a browser and navigate to the `base-url` + `/replmonitor/listpublications/<-connectionstringname->` to test the service. Below are some examples:
 
 1. `http://localhost:8090/replmonitor/listpublications/serverA` Will list the publications for connectionstring `serverA`. An optional `publisher` can be specified to filter a specific publisher (`http://localhost:8090/replmonitor/listpublications/serverA?publisher=foo` for example).
 2. `http://localhost:8090/replmonitor/listpublishers/serverA` Will list the publishers for connectionstring `serverA`. Optional querystring parameters are `publisher`, `publisherdb`, `publication` and [`publicationtype`](https://github.com/RobThree/NMSSQLReplication/blob/master/NMSSQLReplication/Enums/PublicationType.cs).
