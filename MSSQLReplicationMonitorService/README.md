@@ -5,9 +5,15 @@ The MSSQL ReplicationMonitor Service is a lightweight Windows Service to provide
 
 ## Installation
 
-First things first. You need to add an URL reservation before you can run the application (or service) as follows:
+First things first. You (probably, **unless** the application / service is ran as a user with administrative privileges) need to add an URL reservation before you can run the application (or service) as follows:
 
 `netsh http add urlacl url=http://+:8090/replmonitor user=DOMAIN\user`
+
+or
+
+`netsh http add urlacl url=http://+:8090/replmonitor user=MACHINENAME\user`
+
+Where `8090` is the port to be used.
 
 Next, edit the config file `MSSQLReplicationMonitorService.exe.config` to specify the `baseurl` and add one or more connectionstrings:
 
