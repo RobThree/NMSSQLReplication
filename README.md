@@ -1,5 +1,4 @@
-NMSSQLReplication
-=================
+# ![Logo](https://raw.github.com/RobThree/NMSSQLReplication/master/icon_64.png) NMSSQLReplication
 
 NMSSQLReplication provides a number of extensionmethods on the `SqlConnection` object (**not** `IDbConnection`, since the replication information and methods are SQL-Server specific!) that allow you to easily retrieve information about replication allowing you to build, for example, a [replication status monitor](https://github.com/RobThree/NMSSQLReplication/tree/master/MSSQLReplicationMonitorService). This information is retrieved by executing a number of stored procedures described in [Programmatically Monitor Replication](http://technet.microsoft.com/en-us/library/ms147874.aspx). All you need to do is open a `SqlConnection` (make sure you have the required permissions!) and call the methods provided by NMSSQLReplication. NMSSQLReplication is available as a [NuGet package](https://www.nuget.org/packages/NMSSQLReplication).
 
