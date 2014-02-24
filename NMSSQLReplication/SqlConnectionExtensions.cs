@@ -154,7 +154,7 @@ namespace NMSSQLReplication
         /// <remarks>See <a href="http://technet.microsoft.com/en-us/library/ms189442.aspx">MSDN</a></remarks>
         public static IEnumerable<PublicationThreshold> ListPublicationThresholds(this SqlConnection connection, 
             string filterpublisher = null, string filterpublisherdb = null, string filterpublication = null, 
-            PublicationType filterpublicationtype = PublicationType.Any, string filterthresholdmetricname = null)
+            PublicationType? filterpublicationtype = PublicationType.Any, string filterthresholdmetricname = null)
         {
             return connection.Query<PublicationThreshold>("sp_replmonitorhelppublicationthresholds",
                 new
