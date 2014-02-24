@@ -77,7 +77,7 @@ class Program
                 foreach (var l in publications)
                 {
                     //List publication thresholds for publication l
-                    var publicationthresholds = connection.ListPublicationThresholds(p.Name, filterpublicationtype: l.PublicationType);
+                    var publicationthresholds = connection.ListPublicationThresholds(p.Name, l.PublisherDb, l.Name);
 
                     //List all subscriptions for publication l
                     var subscriptions = connection.ListSubscriptions(p.Name, filterpublicationtype: l.PublicationType);
