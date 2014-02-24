@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MSSQLReplicationMonitorService.Framework;
+using System;
 using System.Linq;
 using System.ServiceProcess;
-using MSSQLReplicationMonitorService.Framework;
 
 namespace MSSQLReplicationMonitorService
 {

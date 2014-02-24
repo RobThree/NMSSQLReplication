@@ -1,10 +1,8 @@
 ﻿using NMSSQLReplication;
-using System.Linq;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.Http;
-using Newtonsoft.Json;
 
 namespace MSSQLReplicationMonitorService
 {
