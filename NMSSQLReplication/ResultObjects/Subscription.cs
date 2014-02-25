@@ -110,7 +110,7 @@ namespace NMSSQLReplication
         /// <summary>
         /// Connection used when synchronizing a subscription to a merge publication.
         /// </summary>
-        public MergeConnectionType MergeConnectionType { get; set; }
+        public MergeConnectionType? MergeConnectionType { get; set; }
 
         /// <summary>
         /// Performance of the last synchronization compared to all synchronizations for the subscription, which is based on the delivery rate of the last synchronization divided by the average of all previous delivery rates.
