@@ -33,9 +33,10 @@
     </DocumentationSources>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="NMSSQLReplication" isDocumented="True">The NMSSQLReplication namespace provides extension methods on the &lt;see cref="T:System.Data.SqlClient.SqlConnection"/&gt; object which allows you to easily retrieve (and manage) replication information.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="(global)" isDocumented="False" /></NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+    </NamespaceSummaries>
     <ProjectSummary>&amp;lt%3bpara&amp;gt%3bNMSSQLReplication provides a number of extensionmethods on the &amp;lt%3bsee cref=&amp;quot%3bT:System.Data.SqlClient.SqlConnection&amp;quot%3b/&amp;gt%3b object %28&amp;lt%3bstrong&amp;gt%3bnot&amp;lt%3b/strong&amp;gt%3b IDbConnection, since the replication information and methods are SQL-Server specific!%29 that allow you to easily retrieve information about replication allowing you to build, for example, a replication status monitor. This information is retrieved by executing a number of stored procedures described in Programmatically Monitor Replication. All you need to do is open a SqlConnection %28make sure you have the required permissions!%29 and call the methods provided by NMSSQLReplication.&amp;lt%3b/para&amp;gt%3b</ProjectSummary>
-    <HelpFileVersion>0.3.1.0</HelpFileVersion>
+    <HelpFileVersion>0.3.2.0</HelpFileVersion>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <PresentationStyle>VS2005</PresentationStyle>
@@ -61,9 +62,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  </ItemGroup>
   <!-- Import the SHFB build targets -->
   <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
 </Project>

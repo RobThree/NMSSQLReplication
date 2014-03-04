@@ -138,6 +138,7 @@ namespace NMSSQLReplication
         /// <returns>Returns the MonitorRanking value as TransactionalPublicationMonitorRanking enum.</returns>
         public TransactionalPublicationMonitorRanking GetMonitorRankingForTransactionalPublication()
         {
+            //TODO: Maybe turn this into a property like TransactionalPerformanceQuality?
             return (TransactionalPublicationMonitorRanking)this.MonitorRanking;
         }
 
@@ -147,6 +148,7 @@ namespace NMSSQLReplication
         /// <returns>Returns the MonitorRanking value as MergePublicationMonitorRanking enum.</returns>
         public MergePublicationMonitorRanking GetMonitorRankingForMergePublication()
         {
+            //TODO: Maybe turn this into a property like MergePerformanceQuality?
             return (MergePublicationMonitorRanking)this.MonitorRanking;
         }
 
@@ -189,5 +191,59 @@ namespace NMSSQLReplication
         /// Is the name of the Publisher.
         /// </summary>
         public string Publisher { get; set; }
+
+        /// <summary>
+        /// For transactional replication, performance quality is determined by the latency threshold.
+        /// </summary>
+        /// <returns>Returns the performance quality value.</returns>
+        /// <remarks>See <a href="http://technet.microsoft.com/en-us/library/ms152768.aspx">MSDN</a></remarks>
+        public TransactionalPerformanceQuality TransactionalPerformanceQuality
+        {
+            get
+            {
+                if (this.LatencyThreshold > 0)
+                {
+                    var value = this.Latency / (double)this.LatencyThreshold;
+                    if (value < .35)
+                        return TransactionalPerformanceQuality.Excellent;
+                    if (value < 60)
+                        return TransactionalPerformanceQuality.Good;
+                    if (value < 85)
+                        return TransactionalPerformanceQuality.Fair;
+                    if (value < 100)
+                        return TransactionalPerformanceQuality.Poor;
+                    return TransactionalPerformanceQuality.Critical;
+                }
+                return TransactionalPerformanceQuality.None;
+            }
+            set
+            {
+                //NO-OP; this is just to force the XML serializer to output the property since it, by default doesn't
+                //       output read-only properties. Instead of messing with the config in another project (which
+                //       would require us pulling in the types in this assembly) we just add an empty setter.
+                //       Also see: http://stackoverflow.com/a/14463089/215042
+            }
+        }
+
+        /// <summary>
+        /// For merge replication
+        /// </summary>
+        /// <returns>Returns the performance quality value.</returns>
+        /// <remarks>See <a href="http://technet.microsoft.com/en-us/library/ms152768.aspx">MSDN</a></remarks>
+        public MergePerformanceQuality MergePerformanceQuality
+        {
+            get
+            {
+                //TODO: Implement!
+                return MergePerformanceQuality.None;
+            }
+            set
+            {
+                //NO-OP; this is just to force the XML serializer to output the property since it, by default doesn't
+                //       output read-only properties. Instead of messing with the config in another project (which
+                //       would require us pulling in the types in this assembly) we just add an empty setter.
+                //       Also see: http://stackoverflow.com/a/14463089/215042
+            }
+        }
     }
 }

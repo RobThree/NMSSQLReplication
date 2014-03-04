@@ -56,6 +56,7 @@
     <Compile Include="Enums\Metric.cs" />
     <Compile Include="Enums\Mode.cs" />
     <Compile Include="Enums\MonitorRanking.cs" />
+    <Compile Include="Enums\PerformanceMeasure.cs" />
     <Compile Include="Enums\PublicationType.cs" />
     <Compile Include="Enums\Status.cs" />
     <Compile Include="Enums\SubscriptionType.cs" />

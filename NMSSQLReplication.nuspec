@@ -3,7 +3,7 @@
   <metadata>
     <id>NMSSQLReplication</id>
     <title>.Net MSSQL Replication helper</title>
-    <version>0.3.1-alpha</version>
+    <version>0.3.2-alpha</version>
     <authors>RobIII</authors>
     <owners>RobIII</owners>
     <projectUrl>https://github.com/RobThree/NMSSQLReplication</projectUrl>
@@ -14,8 +14,7 @@
       This package provides a simple abstraction over MSSQL's replication features. Not all features are supported currently.
     </summary>
     <releaseNotes>
-      * PublicationType is now nullable on ListPublicationThresholds method
-      * MergeConnectionType property is now nullable on Subscription object
+      * Added TransactionalPerformanceQuality and MergePerformanceQuality properties (only the former is propertly implemented!)
     </releaseNotes>
     <tags>mssql replication</tags>
     <dependencies>
