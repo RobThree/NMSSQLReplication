@@ -173,3 +173,5 @@ class Program
 ## Finally...
 
 Feedback and/or help of any kind is most welcome!
+
+[![Build status](https://ci.appveyor.com/api/projects/status/eoebdei9t4uqsxjt)](https://ci.appveyor.com/project/RobIII/nmssqlreplication)
