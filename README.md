@@ -174,4 +174,4 @@ class Program
 
 Feedback and/or help of any kind is most welcome!
 
-[![Build status](https://ci.appveyor.com/api/projects/status/eoebdei9t4uqsxjt)](https://ci.appveyor.com/project/RobIII/nmssqlreplication)
+[![Build status](https://ci.appveyor.com/api/projects/status/eoebdei9t4uqsxjt)](https://ci.appveyor.com/project/RobIII/nmssqlreplication) <a href="https://www.nuget.org/packages/NMSSQLReplication/"><img src="http://img.shields.io/nuget/v/NMSSQLReplication.svg?style=flat-square" alt="NuGet version" height="18"></a> <a href="https://www.nuget.org/packages/NMSSQLReplication/"><img src="http://img.shields.io/nuget/dt/NMSSQLReplication.svg?style=flat-square" alt="NuGet version" height="18"></a>
